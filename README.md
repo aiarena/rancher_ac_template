@@ -6,3 +6,6 @@ this minimal setup should generate 3 yaml files,
 - deployment.yaml
 - service.yaml
 - configmap.yaml
+
+Those files will then be placed in the relevant components in rancher,  
+TODO   explain  this process 
