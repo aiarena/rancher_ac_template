@@ -1,0 +1,4 @@
+kubeconfig.*
+kubeconfig
+config.*.yaml
+k3s

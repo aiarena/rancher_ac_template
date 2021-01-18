@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arenaclient
+spec:
+  template:
+    spec:
+      containers:
+      - name: arenaclient
+        image: aiarena/arenaclient

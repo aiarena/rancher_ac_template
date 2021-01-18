@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arenaclient
+  labels:
+    app: arenaclient
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arenaclient
+  template:
+    metadata:
+      labels:
+        app: arenaclient
+    spec:
+      containers:
+      - name: arenaclient
+        image: aiarena/arenaclient
+        ports:
+        - containerPort: 8765
+        volumeMounts:
+        - name: config  
+          mountPath: /root/aiarena-client/config.py
+          subPath: config.py
+        resources: {} 
+      volumes:
+      - name: config
+        configMap:
+          name: config
