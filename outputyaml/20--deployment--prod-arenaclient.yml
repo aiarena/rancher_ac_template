@@ -31,5 +31,5 @@ spec:
               type: FileOrCreate
       volumes:
         - configMap:
-            name: prod-config-4hc62745m8
+            name: prod-config-t87b8m2htm
           name: config
