@@ -23,6 +23,7 @@ spec:
         - name: config  
           mountPath: /root/aiarena-client/config.py
           subPath: config.py
+          type: FileOrCreate
         resources: {} 
       volumes:
       - name: config

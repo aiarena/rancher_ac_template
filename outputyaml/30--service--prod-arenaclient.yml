@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -5,12 +6,11 @@ metadata:
     app: arenaclient
     environment: production
   name: prod-arenaclient
-  namespace: default
 spec:
   ports:
-  - port: 8083
-    protocol: TCP
-    targetPort: 8765
+    - port: 8083
+      protocol: TCP
+      targetPort: 8765
   selector:
     app: arenaclient
     environment: production

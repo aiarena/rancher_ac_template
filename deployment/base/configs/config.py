@@ -1,23 +1,19 @@
 import os
 from urllib import parse
 from arenaclient.match.matches import HttpApiMatchSource
-
 ARENA_CLIENT_ID = ""
 API_TOKEN = ""
-
 ROUNDS_PER_RUN = 1
 BASE_WEBSITE_URL = ""
 API_MATCHES_URL = parse.urljoin(BASE_WEBSITE_URL, "/api/arenaclient/matches/")
 API_RESULTS_URL = parse.urljoin(BASE_WEBSITE_URL, "/api/arenaclient/results/")
 API_SET_STATUS_URL = parse.urljoin(BASE_WEBSITE_URL, "/api/arenaclient/set-status/")
 MATCH_SOURCE_CONFIG = HttpApiMatchSource.HttpApiMatchSourceConfig(api_url=BASE_WEBSITE_URL,api_token=API_TOKEN)
-
 # PATHS AND FILES
 TEMP_PATH = "/tmp/aiarena/"
 LOCAL_PATH = os.path.dirname(__file__)
 WORKING_DIRECTORY = LOCAL_PATH  # same for now
-LOG_FILE = os.path.join(WORKING_DIRECTORY, "../aiarena-client.log")
-# LOG_FILE = "/root/aiarena-client.log"
+LOG_FILE = os.path.join(WORKING_DIRECTORY, "../logs/aiarena-client.log")
 REPLAYS_DIRECTORY = os.path.join(WORKING_DIRECTORY, "../replays")
 BOTS_DIRECTORY = os.path.join(WORKING_DIRECTORY, "../bots")
 CLEAN_BOT_DIRECTORIES_BEFORE_MATCH_START = False
